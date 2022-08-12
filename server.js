@@ -11,10 +11,10 @@ const app = express();
 app.use(express.json());
 
 //for parsing application/x-www-form-urlencoded
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 //path to image folder
-// app.use("/static", express.static(__dirname + "/assets"));
+app.use("/static", express.static(__dirname + "/assets"));
 
 //redirect to fruit file
 app.use("/api/fruits", fruitsRoutes);
