@@ -1,10 +1,31 @@
-const { response } = require("express");
 const express = require("express");
 const router = express.Router();
-const path = require("path");
+const { getFruits, sendFruit } = require("../controllers/fruitsController");
 
-router.get("/", (request, response) => response.send("Get All fruits"));
-router.get("/:id", (request, response) => response.send("Get one fruit"));
-router.post("/", (request, response) => response.send("Send fruit"));
+const path = require("path");
+// const multer = require("multer");
+
+// //Show where to store downloaded files
+// const storage = multer.diskStorage({
+//   destination: "./assets/",
+//   filename: (req, file, cb) => {
+//     cb(
+//       null,
+//       file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+//     );
+//   },
+// });
+
+// const upload = multer({ storage });
+
+//Get All fruits
+router.get("/", getFruits);
+
+//Get fruit by id
+router.get("/:id", (req, res) => res.send("Get one fruit"));
+
+//Send fruit
+//upload.single("image"),
+router.post("/", sendFruit);
 
 module.exports = router;
