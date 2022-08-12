@@ -1,10 +1,13 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
-require("dotenv").config();
-const port = process.env.PORT || 5000;
+const fruitsRoutes = require("./routes/fruits");
 
-// for parsing application/json
+//express app
+const app = express();
+
+// middleware for parsing application/json
 app.use(express.json());
 
 //for parsing application/x-www-form-urlencoded
@@ -14,10 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/static", express.static(__dirname + "/assets"));
 
 //redirect to fruit file
-app.use("/api/fruits", require("./routes/fruits"));
+app.use("/api/fruits", fruitsRoutes);
 
-mongoose.connect("mongodb://localhost:27017").then(() => {
-  app.listen(port, () => {
-    console.log(`App listening on port ${port}`);
-  });
-});
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    app.listen(process.env.PORT, () => {
+      console.log(`connected to db & listen on port 4000`);
+    });
+  })
+  .catch((e) => console.log(e));
