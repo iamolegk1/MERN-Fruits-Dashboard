@@ -1,7 +1,14 @@
 import React from "react";
+import FruitsList from "../../components/FruitsList";
+import Header from "../../components/Header";
 
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <Header />
+      <FruitsList />
+    </>
+  );
 };
 
 export default HomePage;
