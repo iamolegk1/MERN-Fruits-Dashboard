@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { paths } from "../../app/paths";
 import styles from "./index.module.css";
 
 const Header = () => {
@@ -15,8 +17,10 @@ const Header = () => {
         </div>
         <nav>
           <ul className={styles.nav} role="navigation">
-            <li className="active">
-              <p>home</p>
+            <li>
+              <Link className={styles.link} to={paths.sell}>
+                sell fruit
+              </Link>
             </li>
             <li>
               <p>delivery</p>
