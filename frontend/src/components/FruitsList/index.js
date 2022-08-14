@@ -11,11 +11,11 @@ const FruitsList = () => {
     dispatch(getFruits());
   }, [dispatch]);
 
-  if (loading) {
-    return <Spinner />;
-  }
-
-  return <div>{fruitsList && fruitsList.map((fruit) => fruit.name)}</div>;
+  return loading ? (
+    <Spinner />
+  ) : (
+    <div>{fruitsList && fruitsList.map((fruit) => fruit.name)}</div>
+  );
 };
 
 export default FruitsList;
