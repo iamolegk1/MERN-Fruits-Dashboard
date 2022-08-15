@@ -18,7 +18,7 @@ const Header = () => {
         <nav>
           <ul className={styles.nav} role="navigation">
             <li>
-              <Link className={styles.link} to={paths.sell}>
+              <Link className={styles.sell} to={paths.sell}>
                 sell fruit
               </Link>
             </li>

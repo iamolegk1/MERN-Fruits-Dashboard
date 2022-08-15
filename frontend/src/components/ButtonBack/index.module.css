@@ -1,0 +1,16 @@
+.svg {
+  height: 50px;
+  width: 50px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #effaf9;
+  color: #474747;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
