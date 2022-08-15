@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { paths } from "../../app/paths";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import styles from "./index.module.css";
