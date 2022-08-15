@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getFruit } from "../../Slice/FruitSlice";
 import Spinner from "../Spinner";
@@ -10,6 +10,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const FruitBuy = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { fruit, loading } = useSelector((state) => state.fruit);
 
@@ -43,7 +44,11 @@ const FruitBuy = () => {
                 <p>
                   <span className={styles.price}>{fruit.price}$</span>
                 </p>
-                <button className={styles.button} type="button">
+                <button
+                  onClick={() => navigate("/order")}
+                  className={styles.button}
+                  type="button"
+                >
                   buy now
                 </button>
               </div>
