@@ -27,19 +27,19 @@ const sendFruit = async (req, res) => {
   const errors = {};
 
   if (!req.body.name) {
-    errors.name = { mssg: "Please enter name" };
+    errors.name = { message: "Please enter name" };
   }
 
   if (!req.body.description) {
-    errors.description = { mssg: "Please enter description" };
+    errors.description = { message: "Please enter description" };
   }
 
   if (!req.body.price) {
-    errors.price = { mssg: "Please enter price" };
+    errors.price = { message: "Please enter price" };
   }
 
   if (!req.file) {
-    errors.image = { mssg: "Please add an image" };
+    errors.image = { message: "Please add an image" };
   }
 
   if (Object.keys(errors).length > 0) {
