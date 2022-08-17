@@ -5,6 +5,7 @@ import OrderPage from "../pages/OrderPage";
 import ProductPage from "../pages/ProductPage";
 import SellPage from "../pages/SellPage";
 import { paths } from "./paths";
+
 const { home, fruit, sell, order } = paths;
 
 function App() {
