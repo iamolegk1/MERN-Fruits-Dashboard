@@ -8,4 +8,5 @@ Nodejs, MongoDB, Express, Multer and Mongoose for the backend
 
 CSS Modules for styles 
 
-![Video_220818181231(1)](https://user-images.githubusercontent.com/86320945/185436821-28605036-8cdb-42b4-9096-fe1ab4a15c2e.gif)
+https://user-images.githubusercontent.com/86320945/185446302-c52de3e5-9566-4c23-ac64-61330c6b773d.mp4
+
