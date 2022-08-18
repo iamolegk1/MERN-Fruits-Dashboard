@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import useSort from "../../hooks/useSort";
+
 import { getFruits } from "../../Slice/FruitsSlice";
+import useSort from "../../hooks/useSort";
 import FruitItem from "../FruitItem";
 import Spinner from "../Spinner";
+
 import styles from "./index.module.css";
 
 const FruitsList = () => {

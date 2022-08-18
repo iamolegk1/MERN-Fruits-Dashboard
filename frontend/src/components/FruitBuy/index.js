@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import { getFruit } from "../../Slice/FruitSlice";
 import Spinner from "../Spinner";
 import ButtonBack from "../ButtonBack";
 import styles from "./index.module.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 
 const FruitBuy = () => {
   const { id } = useParams();

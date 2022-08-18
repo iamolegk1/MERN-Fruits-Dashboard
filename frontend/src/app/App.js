@@ -4,9 +4,9 @@ import HomePage from "../pages/HomePage";
 import OrderPage from "../pages/OrderPage";
 import ProductPage from "../pages/ProductPage";
 import SellPage from "../pages/SellPage";
-import { paths } from "./paths";
+import { PATHS } from "./constants";
 
-const { home, fruit, sell, order } = paths;
+const { home, fruit, sell, order } = PATHS;
 
 function App() {
   return (

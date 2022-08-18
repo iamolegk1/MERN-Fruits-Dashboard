@@ -1,4 +1,5 @@
 import React from "react";
+
 import FruitsList from "../../components/FruitsList";
 import Header from "../../components/Header";
 

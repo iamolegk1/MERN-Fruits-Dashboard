@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import fruits from "../Slice/FruitsSlice";
 import fruit from "../Slice/FruitSlice";
 

@@ -1,9 +1,10 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { sellFruit, resetErrors } from "../../Slice/FruitSlice";
 import { useNavigate } from "react-router-dom";
+
+import { sellFruit, resetErrors } from "../../Slice/FruitSlice";
+import { PATHS } from "../../app/constants";
 import styles from "./index.module.css";
-import { paths } from "../../app/paths";
 
 const FormSell = () => {
   const [name, setName] = useState("");
@@ -27,7 +28,7 @@ const FormSell = () => {
 
       dispatch(sellFruit(formData)).then((res) => {
         if (!res.error) {
-          history(`${paths.fruit}/${res.payload._id}`);
+          history(`${PATHS.fruit}/${res.payload._id}`);
         }
       });
     },

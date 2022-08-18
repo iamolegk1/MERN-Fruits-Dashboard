@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
 import { getFruit as getServerFruit, postSellFruit } from "../services";
 
 export const getFruit = createAsyncThunk(

@@ -1,6 +1,8 @@
 import React from "react";
+
 import ButtonBack from "../../components/ButtonBack";
 import FormSell from "../../components/FormSell";
+
 import styles from "./index.module.css";
 
 const SellPage = () => {
